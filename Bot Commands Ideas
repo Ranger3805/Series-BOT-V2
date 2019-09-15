@@ -1,0 +1,18 @@
+const serverStats = {
+guildID: '614904662575022083',
+totalUserID: '621922381937508381',
+memberCountID: '621922556743647242',
+botcountID:'621922556743647242',
+}
+bot.on('guildMemberAdd', member => {
+if(member.guild.id !== serverStats.guildID) return;
+bot.guild.channels.get(serverStats.totalUserID).setName(`Total Users: ${member.guild.memberCount}`);
+bot.channels.get(serverStats.memberCountID).setName(`Member Count: ${member.guild.members.filter(m => m.user.bot).size}`);
+bot.channels.get(serverStats.botcountID.setName(`BOT Count: ${member.guild.mebers.filter(m => m.user.bot).size}`));
+} );
+bot.on('guildMemberRemove', member => {
+if(member.guild.id !== serverStats.guildID) return;
+bot.guild.channels.get(serverStats.totalUserID).setName(`Total Users : ${member.guild.memberCount}`);
+bot.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => m.user.bot).size}`);
+bot.channels.get(serverStats.botcountID.setName(`BOT Count : ${member.guild.mebers.filter(m => m.user.bot).size}`));
+} );

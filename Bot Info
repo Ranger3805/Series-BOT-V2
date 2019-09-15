@@ -1,0 +1,37 @@
+Invite Link: https://discordapp.com/oauth2/authorize?client_id=619575159786962944&scope=bot&permissions=2080898303
+Token: NjE5NTc1MTU5Nzg2OTYyOTQ0.XXKRiA.d3ri9tRhU93VfGdtYDmZi4adX4Q
+Bot Owner ID: 459414913505558549
+
+Command Template:
+
+const { Discord } = require("discord.js")
+const { RichEmbed } = require("discord.js")
+const { gold } = require("../../colours.json")
+const { prefix } = require("../../botconfig.json");
+module.exports= {
+    config: {
+        name: "",
+        description: "",
+        usage: "",
+        category: "",
+        accessableby: "",
+        aliases: [""]
+    },
+    run: async (bot, message, args) => {
+
+
+
+let bicon = bot.user.displayAvatarURL;
+.setThumbnail(bicon)
+
+let botembed = new RichEmbed()
+.setTitle("")
+.setDescription("")
+.setColor(cyan)
+.addField("")
+.addField("")
+.addField("")
+.addField("")
+.addField("")
+.addField("")
+.setFooter("");
